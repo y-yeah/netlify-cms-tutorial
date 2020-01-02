@@ -1,0 +1,48 @@
+import i18n from "i18next";
+import Backend from "i18next-xhr-backend";
+import LanguageDetector from "i18next-browser-languagedetector";
+import { initReactI18next } from "react-i18next";
+
+i18n
+  .use(Backend)
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    // we init with resources
+    // resources: {
+    //   en: {
+    //     translations: {
+    //       "To get started, edit <1>src/App.js</1> and save to reload.":
+    //         "To get started, edit <1>src/App.js</1> and save to reload.",
+    //       "Welcome to React": "Welcome to React and react-i18next",
+    //       welcome: "Hello <br/> <strong>World</strong>",
+    //     },
+    //   },
+    //   de: {
+    //     translations: {
+    //       "To get started, edit <1>src/App.js</1> and save to reload.":
+    //         "Starte in dem du, <1>src/App.js</1> editierst und speicherst.",
+    //       "Welcome to React": "Willkommen bei React und react-i18next",
+    //     },
+    //   },
+    // },
+    fallbackLng: "en",
+    debug: true,
+
+    // // have a common namespace used around the full app
+    ns: ["PageHeader"],
+    defaultNS: "PageHeader",
+
+    keySeparator: false, // we use content as keys
+
+    interpolation: {
+      escapeValue: false,
+    },
+
+    react: {
+      useSuspense: false,
+      wait: true,
+    },
+  });
+
+export default i18n;
