@@ -17,7 +17,7 @@
     "gatsby": "^2.18.12",
     "gatsby-plugin-netlify-cms": "^4.1.33",
     "gatsby-source-filesystem": "^2.1.43",
-    "gatsby-transformer-remark": "^2.6.45",
+    "gatsby-transformer-remark": "^5.25.1",
     "i18next": "^19.0.2",
     "i18next-browser-languagedetector": "^4.0.1",
     "i18next-xhr-backend": "^3.2.2",
